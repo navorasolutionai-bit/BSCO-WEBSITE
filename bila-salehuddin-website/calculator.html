@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Legal Fee &amp; Stamp Duty Calculator — Bila Salehuddin &amp; Co.</title>
+<meta name="description" content="Estimate your Malaysian property legal fees and stamp duty for the Sale &amp; Purchase Agreement (SPA) and loan, plus monthly loan repayment, with the Bila Salehuddin &amp; Co. calculator." />
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo-circle.jpg" alt="Bila Salehuddin &amp; Co. logo" style="width:36px;height:36px;border-radius:50%;object-fit:cover;" />
+      <span class="brand">Bila Salehuddin &amp; Co.</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+          Practice Areas
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          <a href="eviction.html"><span class="dm-dot"></span>Eviction &amp; Tenancy</a>
+          <a href="contracts.html"><span class="dm-dot"></span>Corporate &amp; Contracts</a>
+          <a href="conveyancing.html"><span class="dm-dot"></span>Conveyancing</a>
+          <a href="litigation.html"><span class="dm-dot"></span>Litigation</a>
+          <a href="ip.html"><span class="dm-dot"></span>Intellectual Property</a>
+          <a href="accident.html"><span class="dm-dot"></span>Accident &amp; Injury</a>
+        </div>
+      </div>
+      <a href="calculator.html">Calculator</a>
+      <a href="gallery.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+      <a href="book.html" class="btn btn-primary" style="padding:0.55rem 1.1rem; font-size:0.85rem;">Book Consultation</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-menu-overlay"></div>
+<div class="mobile-drawer" role="dialog" aria-label="Navigation menu">
+  <div class="mobile-drawer-header">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo-circle.jpg" alt="Logo" style="width:32px;height:32px;border-radius:50%;object-fit:cover;" />
+      <span style="font-family:var(--font-serif);font-size:1rem;color:var(--color-primary-dark);">Bila Salehuddin &amp; Co.</span>
+    </a>
+    <button class="mobile-drawer-close" aria-label="Close menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <span class="mobile-drawer-section-title">Practice Areas</span>
+  <a href="eviction.html">Eviction &amp; Tenancy</a>
+  <a href="contracts.html">Corporate &amp; Contracts</a>
+  <a href="conveyancing.html">Conveyancing</a>
+  <a href="litigation.html">Litigation</a>
+  <a href="ip.html">Intellectual Property</a>
+  <a href="accident.html">Accident &amp; Injury</a>
+  <a href="calculator.html" style="margin-top:0.5rem;">Calculator</a>
+  <a href="gallery.html" style="margin-top:0.5rem;">Testimonials</a>
+  <a href="contact.html" style="margin-top:0.5rem;">Contact</a>
+  <a href="book.html" class="btn-mobile-book">Book a Consultation</a>
+</div>
+
+<header class="page-header" id="main-content" tabindex="-1">
+  <div class="container">
+    <span class="eyebrow">Resources</span>
+    <h1>Legal Fee &amp; Stamp Duty Calculator</h1>
+    <p>Estimate the legal fees and stamp duty for your Sale &amp; Purchase Agreement and loan, plus an indicative monthly repayment. For Malaysian citizens and permanent residents.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="calc-wrap">
+
+      <!-- INPUT PANEL -->
+      <form class="calc-panel" id="calc-form" autocomplete="off" novalidate>
+        <div class="calc-panel-title">Your transaction</div>
+        <p class="calc-panel-sub">Enter the property price (or market value, whichever is higher). All figures are estimates in Ringgit Malaysia.</p>
+
+        <div class="calc-fieldset-title">Property</div>
+        <div class="form-group">
+          <label for="calc-price">Purchase price / market value</label>
+          <div class="calc-input-money">
+            <span class="calc-prefix">RM</span>
+            <input type="text" inputmode="numeric" id="calc-price" placeholder="500,000" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>How are you paying?</label>
+          <div class="calc-toggle" role="radiogroup" aria-label="Payment method">
+            <input type="radio" name="financing" id="fin-loan" value="loan" checked />
+            <label for="fin-loan">With a loan</label>
+            <input type="radio" name="financing" id="fin-cash" value="cash" />
+            <label for="fin-cash">Full cash</label>
+          </div>
+        </div>
+
+        <div class="calc-loan-fields" id="loan-fields">
+          <div class="calc-fieldset-title">Loan / financing</div>
+          <div class="form-group">
+            <label for="calc-margin">Margin of finance</label>
+            <div class="calc-input-suffix">
+              <input type="text" inputmode="decimal" id="calc-margin" value="90" />
+              <span class="calc-suffix">%</span>
+            </div>
+            <p class="calc-hint">Typically up to 90% for a first or second home.</p>
+          </div>
+          <div class="form-group">
+            <label for="calc-loan">Loan amount</label>
+            <div class="calc-input-money">
+              <span class="calc-prefix">RM</span>
+              <input type="text" inputmode="numeric" id="calc-loan" placeholder="450,000" />
+            </div>
+            <p class="calc-hint">Auto-filled from the margin above — edit it to override.</p>
+          </div>
+          <div class="form-group">
+            <label for="calc-rate">Interest / profit rate</label>
+            <div class="calc-input-suffix">
+              <input type="text" inputmode="decimal" id="calc-rate" value="4.0" />
+              <span class="calc-suffix">%</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="calc-tenure">Loan tenure</label>
+            <div class="calc-input-suffix">
+              <input type="text" inputmode="numeric" id="calc-tenure" value="35" />
+              <span class="calc-suffix">yrs</span>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!-- RESULTS -->
+      <aside class="calc-results" aria-live="polite">
+        <div class="calc-results-eyebrow">Estimated costs</div>
+        <h3>Your summary</h3>
+
+        <div id="calc-output">
+          <div class="calc-empty" id="calc-empty">Enter a property price to see your estimate.</div>
+
+          <div id="calc-detail" hidden>
+            <div class="calc-group">
+              <div class="calc-group-head">Sale &amp; Purchase Agreement</div>
+              <div class="calc-line">
+                <span class="calc-label">SPA legal fee</span>
+                <span class="calc-value" id="out-spa-fee">RM 0.00</span>
+              </div>
+              <div class="calc-line calc-sub">
+                <span class="calc-label">SST on legal fee (8%)</span>
+                <span class="calc-value" id="out-spa-sst">RM 0.00</span>
+              </div>
+              <div class="calc-line">
+                <span class="calc-label">Stamp duty (MOT)</span>
+                <span class="calc-value" id="out-spa-stamp">RM 0.00</span>
+              </div>
+            </div>
+
+            <div class="calc-group" id="loan-group">
+              <div class="calc-group-head">Loan agreement</div>
+              <div class="calc-line">
+                <span class="calc-label">Loan legal fee</span>
+                <span class="calc-value" id="out-loan-fee">RM 0.00</span>
+              </div>
+              <div class="calc-line calc-sub">
+                <span class="calc-label">SST on legal fee (8%)</span>
+                <span class="calc-value" id="out-loan-sst">RM 0.00</span>
+              </div>
+              <div class="calc-line">
+                <span class="calc-label">Stamp duty (0.5%)</span>
+                <span class="calc-value" id="out-loan-stamp">RM 0.00</span>
+              </div>
+            </div>
+
+            <div class="calc-total">
+              <span class="calc-total-label">Estimated total</span>
+              <span class="calc-total-value" id="out-total">RM 0.00</span>
+            </div>
+
+            <div class="calc-repayment" id="repayment-box" hidden>
+              <span class="calc-rep-label">Indicative monthly repayment<small id="out-rep-terms"></small></span>
+              <span class="calc-rep-value" id="out-repayment">RM 0.00</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <p class="calc-disclaimer container-narrow" style="margin-left:0;">
+      <strong>Please note:</strong> This calculator provides estimates only and does not constitute legal advice or a binding quotation. Legal fees follow the Solicitors' Remuneration Order 2023; stamp duty follows the Stamp Act 1949. Figures exclude disbursements (registration, searches, declarations, etc.) and any applicable exemptions or rebates. Stamp duty is rounded up under the Stamp Act. Rates shown apply to Malaysian citizens and permanent residents — different rules apply to foreign buyers and to certain first-home and exemption schemes. For a precise quotation, <a href="contact.html" style="color:var(--color-gold-deep);text-decoration:underline;">contact us</a>.
+    </p>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to proceed with your property matter?</h2>
+    <p>Get a firm fee quote and have our conveyancing team handle your SPA, loan documentation, and title transfer from start to finish.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="book.html" class="btn btn-gold">Book a Consultation
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="https://wa.me/60134101183?text=Hi%2C%20I%20used%20the%20legal%20fee%20calculator%20and%20would%20like%20a%20quote%20for%20my%20property%20matter." target="_blank" rel="noopener" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.4);">
+        WhatsApp Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo-circle.jpg" alt="Bila Salehuddin &amp; Co. logo" style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,0.15);" />
+          <div>
+            <div style="font-family: var(--font-serif); font-size:1.15rem; color: var(--color-cream); margin-bottom:0.25rem;">Messrs Bila Salehuddin &amp; Co.</div>
+            <div style="font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color: var(--color-gold-light);">Advocates &amp; Solicitors</div>
+          </div>
+        </div>
+        <p style="max-width:340px; margin-top:1rem;">A full-service law firm with offices in Ipoh, Perak and Batu Caves, Kuala Lumpur. Registered with the Malaysian Bar.</p>        <div class="footer-social">
+          <a href="https://www.facebook.com/p/Bila-Salehuddin-Co-Kuala-Lumpur-61574542870846/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/60134101183" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.7c1.7.9 3.7 1.5 5.7 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/bila-salehuddin-co/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="gallery.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="book.html">Book Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Practice</h5>
+        <ul>
+          <li><a href="eviction.html">Eviction &amp; Tenancy</a></li>
+          <li><a href="contracts.html">Corporate &amp; Contracts</a></li>
+          <li><a href="conveyancing.html">Conveyancing</a></li>
+          <li><a href="litigation.html">Litigation</a></li>
+          <li><a href="ip.html">Intellectual Property</a></li>
+          <li><a href="accident.html">Accident &amp; Injury</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><strong style="color:var(--color-cream-dark);">HQ — Ipoh, Perak</strong></li>
+          <li><a href="tel:+60134101183">013-4101 183</a></li>
+          <li><a href="mailto:bsco.law@gmail.com">bsco.law@gmail.com</a></li>
+          <li style="margin-top:0.5rem;"><strong style="color:var(--color-cream-dark);">KL Branch</strong></li>
+          <li><a href="tel:+60147395022">014-7395 022</a></li>
+          <li><a href="mailto:bscokl.law@gmail.com">bscokl.law@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span id="year"></span> Bila Salehuddin &amp; Co. All rights reserved.</div>
+      <div>Information on this site does not constitute legal advice.</div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/60134101183" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.7c1.7.9 3.7 1.5 5.7 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0"/></svg>
+</a>
+
+<button class="back-to-top" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+/* Legal Fee & Stamp Duty Calculator */
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const form = $('calc-form');
+  if (!form) return;
+
+  const SST_RATE = 0.08;
+  const nf = new Intl.NumberFormat('en-MY', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const money = (n) => 'RM ' + nf.format(isFinite(n) ? n : 0);
+
+  // Parse a user-entered number, ignoring commas/spaces and stray characters.
+  const num = (v) => {
+    const n = parseFloat(String(v == null ? '' : v).replace(/[^0-9.]/g, ''));
+    return isFinite(n) ? n : 0;
+  };
+
+  // ── Calculation rules ───────────────────────────────
+  // Legal fee scale (SRO 2023) — applied to both SPA and loan amount.
+  function scaleLegalFee(amount) {
+    if (amount <= 0) return 0;
+    let fee = 0;
+    fee += Math.min(amount, 500000) * 0.0125;            // first 500k @ 1.25%
+    if (amount > 500000) fee += Math.min(amount - 500000, 7000000) * 0.01; // next 7m @ 1%
+    if (amount > 7500000) fee += (amount - 7500000) * 0.01; // excess @ max 1%
+    return fee;
+  }
+  // Stamp duty on transfer (MOT) — tiered ad valorem.
+  function stampDutyMOT(price) {
+    if (price <= 0) return 0;
+    let d = 0;
+    d += Math.min(price, 100000) * 0.01;                 // first 100k @ 1%
+    if (price > 100000) d += Math.min(price - 100000, 400000) * 0.02; // next 400k @ 2%
+    if (price > 500000) d += Math.min(price - 500000, 500000) * 0.03; // next 500k @ 3%
+    if (price > 1000000) d += (price - 1000000) * 0.04;  // thereafter @ 4%
+    return d;
+  }
+  // Loan agreement stamp duty: 0.5% of loan, rounded up to nearest RM (Stamp Act).
+  const loanStampDuty = (loan) => loan > 0 ? Math.ceil(loan * 0.005) : 0;
+
+  function monthlyRepayment(loan, ratePct, years) {
+    if (loan <= 0 || years <= 0) return 0;
+    const r = (ratePct / 100) / 12;
+    const n = years * 12;
+    if (r === 0) return loan / n;
+    const f = Math.pow(1 + r, n);
+    return loan * r * f / (f - 1);
+  }
+
+  // ── Elements ────────────────────────────────────────
+  const priceEl  = $('calc-price');
+  const marginEl = $('calc-margin');
+  const loanEl   = $('calc-loan');
+  const rateEl   = $('calc-rate');
+  const tenureEl = $('calc-tenure');
+  const loanFields = $('loan-fields');
+  const finLoan  = $('fin-loan');
+
+  const out = {
+    empty:     $('calc-empty'),
+    detail:    $('calc-detail'),
+    spaFee:    $('out-spa-fee'),
+    spaSst:    $('out-spa-sst'),
+    spaStamp:  $('out-spa-stamp'),
+    loanGroup: $('loan-group'),
+    loanFee:   $('out-loan-fee'),
+    loanSst:   $('out-loan-sst'),
+    loanStamp: $('out-loan-stamp'),
+    total:     $('out-total'),
+    repBox:    $('repayment-box'),
+    repTerms:  $('out-rep-terms'),
+    repValue:  $('out-repayment'),
+  };
+
+  const usingLoan = () => finLoan.checked;
+  let lastEdited = 'margin'; // track whether margin or loan amount was edited last
+
+  function syncLoanFromMargin() {
+    const price = num(priceEl.value);
+    const margin = num(marginEl.value);
+    if (price > 0) loanEl.value = Math.round(price * margin / 100).toLocaleString('en-MY');
+  }
+  function syncMarginFromLoan() {
+    const price = num(priceEl.value);
+    const loan = num(loanEl.value);
+    if (price > 0) marginEl.value = (Math.round((loan / price) * 1000) / 10);
+  }
+
+  function recalc() {
+    const price = num(priceEl.value);
+    const loanOn = usingLoan();
+
+    if (price <= 0) {
+      out.empty.hidden = false;
+      out.detail.hidden = true;
+      return;
+    }
+    out.empty.hidden = true;
+    out.detail.hidden = false;
+
+    // SPA side
+    const spaFee = scaleLegalFee(price);
+    const spaSst = spaFee * SST_RATE;
+    const mot = stampDutyMOT(price);
+    out.spaFee.textContent  = money(spaFee);
+    out.spaSst.textContent  = money(spaSst);
+    out.spaStamp.textContent = money(mot);
+
+    let total = spaFee + spaSst + mot;
+
+    // Loan side
+    if (loanOn) {
+      out.loanGroup.hidden = false;
+      const loan = num(loanEl.value);
+      const loanFee = scaleLegalFee(loan);
+      const loanSst = loanFee * SST_RATE;
+      const loanStamp = loanStampDuty(loan);
+      out.loanFee.textContent   = money(loanFee);
+      out.loanSst.textContent   = money(loanSst);
+      out.loanStamp.textContent = money(loanStamp);
+      total += loanFee + loanSst + loanStamp;
+
+      const rate = num(rateEl.value);
+      const tenure = num(tenureEl.value);
+      const rep = monthlyRepayment(loan, rate, tenure);
+      if (rep > 0) {
+        out.repBox.hidden = false;
+        out.repValue.textContent = money(rep);
+        out.repTerms.textContent = 'over ' + tenure + ' yrs at ' + rate + '% p.a.';
+      } else {
+        out.repBox.hidden = true;
+      }
+    } else {
+      out.loanGroup.hidden = true;
+      out.repBox.hidden = true;
+    }
+
+    out.total.textContent = money(total);
+  }
+
+  // ── Wiring ──────────────────────────────────────────
+  function toggleLoanFields() {
+    const on = usingLoan();
+    loanFields.hidden = !on;
+    if (on && num(loanEl.value) === 0) syncLoanFromMargin();
+    recalc();
+  }
+
+  priceEl.addEventListener('input', () => {
+    if (lastEdited === 'loan') syncMarginFromLoan(); else syncLoanFromMargin();
+    recalc();
+  });
+  marginEl.addEventListener('input', () => { lastEdited = 'margin'; syncLoanFromMargin(); recalc(); });
+  loanEl.addEventListener('input', () => { lastEdited = 'loan'; syncMarginFromLoan(); recalc(); });
+  rateEl.addEventListener('input', recalc);
+  tenureEl.addEventListener('input', recalc);
+  document.querySelectorAll('input[name="financing"]').forEach((r) =>
+    r.addEventListener('change', toggleLoanFields)
+  );
+
+  // Tidy money fields with thousands separators on blur.
+  [priceEl, loanEl].forEach((el) => {
+    el.addEventListener('blur', () => {
+      const n = num(el.value);
+      if (n > 0) el.value = n.toLocaleString('en-MY');
+    });
+  });
+
+  recalc();
+})();
+</script>
+<script src="assets/main.js"></script>
+</body>
+</html>
