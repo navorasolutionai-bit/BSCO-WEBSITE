@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Testimonials — Bila Salehuddin &amp; Co.</title>
+<meta name="description" content="See Bila Salehuddin & Co. at work — cases handled, agreements signed, and institutional partnerships across Ipoh, Perak and Kuala Lumpur." />
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  .gallery-filters { display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center; margin-bottom:2.5rem; }
+  .gallery-filter { font-family:var(--font-sans); font-size:0.85rem; font-weight:500; letter-spacing:0.02em; padding:0.5rem 1.15rem; border:1px solid var(--color-border); background:transparent; color:var(--color-text-muted); border-radius:2px; cursor:pointer; transition:color 0.2s ease, background 0.2s ease, border-color 0.2s ease; }
+  .gallery-filter:hover { border-color:var(--color-gold); color:var(--color-primary-dark); }
+  .gallery-filter.active { background:var(--color-primary-dark); border-color:var(--color-primary-dark); color:var(--color-cream); }
+
+  .gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; }
+  .gallery-item { position:relative; aspect-ratio:1; overflow:hidden; padding:0; border:1px solid var(--color-border); border-radius:2px; background:var(--color-cream-dark); cursor:pointer; }
+  .gallery-item img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s ease; }
+  .gallery-item:hover img, .gallery-item:focus-visible img { transform:scale(1.06); }
+  .gallery-overlay { position:absolute; inset:0; display:flex; align-items:flex-end; padding:1rem; text-align:left; font-size:0.85rem; font-weight:500; line-height:1.4; color:var(--color-cream); background:linear-gradient(to top, rgba(31,61,58,0.88), rgba(31,61,58,0) 62%); opacity:0; transition:opacity 0.3s ease; }
+  .gallery-item:hover .gallery-overlay, .gallery-item:focus-visible .gallery-overlay { opacity:1; }
+
+  .lightbox { position:fixed; inset:0; z-index:300; display:none; align-items:center; justify-content:center; padding:2rem; background:rgba(0,0,0,0.85); animation:lbFade 0.25s ease; }
+  .lightbox.active { display:flex; }
+  @keyframes lbFade { from { opacity:0; } to { opacity:1; } }
+  .lightbox-figure { margin:0; max-width:920px; max-height:85vh; display:flex; flex-direction:column; align-items:center; }
+  .lightbox-figure img { max-width:100%; max-height:78vh; object-fit:contain; border-radius:2px; box-shadow:0 20px 60px rgba(0,0,0,0.5); }
+  .lightbox-figure figcaption { margin-top:1rem; max-width:620px; text-align:center; font-size:0.9rem; color:var(--color-cream); }
+  .lightbox-close, .lightbox-nav { position:absolute; display:flex; align-items:center; justify-content:center; color:#fff; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.3); border-radius:50%; cursor:pointer; transition:background 0.2s ease; }
+  .lightbox-close { top:1.25rem; right:1.25rem; width:44px; height:44px; }
+  .lightbox-nav { top:50%; transform:translateY(-50%); width:48px; height:48px; }
+  .lightbox-close:hover, .lightbox-nav:hover { background:rgba(255,255,255,0.25); }
+  .lightbox-prev { left:1.25rem; }
+  .lightbox-next { right:1.25rem; }
+  .lightbox-close:focus-visible, .lightbox-nav:focus-visible { outline-color:var(--color-gold-light); }
+
+  @media (max-width:860px) {
+    .gallery-grid { grid-template-columns:repeat(2,1fr); gap:1.5rem; }
+    .lightbox { padding:1rem; }
+    .lightbox-nav { width:40px; height:40px; }
+    .lightbox-prev { left:0.5rem; }
+    .lightbox-next { right:0.5rem; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo-circle.jpg" alt="Bila Salehuddin &amp; Co. logo" style="width:36px;height:36px;border-radius:50%;object-fit:cover;" />
+      <span class="brand">Bila Salehuddin &amp; Co.</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+          Practice Areas
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          <a href="eviction.html"><span class="dm-dot"></span>Eviction &amp; Tenancy</a>
+          <a href="contracts.html"><span class="dm-dot"></span>Corporate &amp; Contracts</a>
+          <a href="conveyancing.html"><span class="dm-dot"></span>Conveyancing</a>
+          <a href="litigation.html"><span class="dm-dot"></span>Litigation</a>
+          <a href="ip.html"><span class="dm-dot"></span>Intellectual Property</a>
+          <a href="accident.html"><span class="dm-dot"></span>Accident &amp; Injury</a>
+        </div>
+      </div>
+      <a href="calculator.html">Calculator</a>
+      <a href="gallery.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+      <a href="book.html" class="btn btn-primary" style="padding:0.55rem 1.1rem; font-size:0.85rem;">Book Consultation</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-menu-overlay"></div>
+<div class="mobile-drawer" role="dialog" aria-label="Navigation menu">
+  <div class="mobile-drawer-header">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo-circle.jpg" alt="Logo" style="width:32px;height:32px;border-radius:50%;object-fit:cover;" />
+      <span style="font-family:var(--font-serif);font-size:1rem;color:var(--color-primary-dark);">Bila Salehuddin &amp; Co.</span>
+    </a>
+    <button class="mobile-drawer-close" aria-label="Close menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <span class="mobile-drawer-section-title">Practice Areas</span>
+  <a href="eviction.html">Eviction &amp; Tenancy</a>
+  <a href="contracts.html">Corporate &amp; Contracts</a>
+  <a href="conveyancing.html">Conveyancing</a>
+  <a href="litigation.html">Litigation</a>
+  <a href="ip.html">Intellectual Property</a>
+  <a href="accident.html">Accident &amp; Injury</a>
+  <a href="calculator.html" style="margin-top:0.5rem;">Calculator</a>
+  <a href="gallery.html" style="margin-top:0.5rem;">Testimonials</a>
+  <a href="contact.html" style="margin-top:0.5rem;">Contact</a>
+  <a href="book.html" class="btn-mobile-book">Book a Consultation</a>
+</div>
+
+<header class="page-header" id="main-content" tabindex="-1">
+  <div class="container">
+    <span class="eyebrow">Testimonials</span>
+    <h1>Our Work in Practice</h1>
+    <p>Real matters, signed agreements, and partnerships built — a look at the work behind Bila Salehuddin &amp; Co.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="gallery-filters reveal" role="group" aria-label="Filter testimonials by type">
+      <button type="button" class="gallery-filter active" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="gallery-filter" data-filter="cases" aria-pressed="false">Cases</button>
+      <button type="button" class="gallery-filter" data-filter="signings" aria-pressed="false">Signings</button>
+      <button type="button" class="gallery-filter" data-filter="partnerships" aria-pressed="false">Partnerships</button>
+    </div>
+
+    <div class="gallery-grid reveal" id="galleryGrid">
+      <button type="button" class="gallery-item" data-category="cases" data-caption="With a client at the court complex following a hearing.">
+        <img src="assets/gallery/court-representation.jpg" alt="Bila Salehuddin &amp; Co. lawyers standing with a client at the court complex" width="526" height="701" loading="lazy" />
+        <span class="gallery-overlay">At the court complex after a hearing</span>
+      </button>
+      <button type="button" class="gallery-item" data-category="cases" data-caption="A concluded matter, settled together with the clients.">
+        <img src="assets/gallery/matter-concluded.jpg" alt="Firm representative with clients after concluding a matter at their business premises" width="443" height="590" loading="lazy" />
+        <span class="gallery-overlay">A matter concluded</span>
+      </button>
+      <button type="button" class="gallery-item" data-category="cases" data-caption="On site for a court-ordered recovery of possession.">
+        <img src="assets/gallery/eviction-1.jpg" alt="Court enforcement officers at a property during a recovery of possession" width="443" height="590" loading="lazy" />
+        <span class="gallery-overlay">Recovery of possession on site</span>
+      </button>
+      <button type="button" class="gallery-item" data-category="cases" data-caption="Carrying out a court-ordered eviction at a residential unit.">
+        <img src="assets/gallery/eviction-2.jpg" alt="Eviction proceedings in a residential corridor with a security officer present" width="443" height="590" loading="lazy" />
+        <span class="gallery-overlay">Eviction at a residential unit</span>
+      </button>
+      <button type="button" class="gallery-item" data-category="cases" data-caption="Recovering vacant possession of a tenanted property.">
+        <img src="assets/gallery/eviction-3.jpg" alt="Recovery of vacant possession at a tenanted unit door" width="443" height="590" loading="lazy" />
+        <span class="gallery-overlay">Recovering vacant possession</span>
+      </button>
+      <button type="button" class="gallery-item" data-category="cases" data-caption="Meeting clients to talk through their matter.">
+        <img src="assets/gallery/client-meeting.jpg" alt="Lawyer in a consultation meeting with clients around a table" width="590" height="443" loading="lazy" />
+        <span class="gallery-overlay">A client consultation</span>
+      </button>
+      <button type="button" class="gallery-item" data-category="signings" data-caption="Executing agreements at a signing session.">
+        <img src="assets/gallery/signing-1.jpg" alt="Client signing documents during a signing session in a meeting room" width="590" height="443" loading="lazy" />
+        <span class="gallery-overlay">Executing agreements</span>
+      </button>
+      <button type="button" class="gallery-item" data-category="signings" data-caption="Exchanging completed documents with a client.">
+        <img src="assets/gallery/signing-2.jpg" alt="Lawyer handing completed documents to a client across a desk" width="590" height="443" loading="lazy" />
+        <span class="gallery-overlay">Exchanging documents</span>
+      </button>
+      <button type="button" class="gallery-item" data-category="signings" data-caption="Closing a deal over a signing meeting.">
+        <img src="assets/gallery/signing-3.jpg" alt="Two parties signing agreements at a closing meeting" width="443" height="590" loading="lazy" />
+        <span class="gallery-overlay">Closing the deal</span>
+      </button>
+      <button type="button" class="gallery-item" data-category="signings" data-caption="Handing over completed Sale &amp; Purchase documents.">
+        <img src="assets/gallery/spa-handover.jpg" alt="Lawyer handing Sale and Purchase Agreement documents to a client" width="526" height="701" loading="lazy" />
+        <span class="gallery-overlay">Sale &amp; Purchase handover</span>
+      </button>
+      <button type="button" class="gallery-item" data-category="partnerships" data-caption="Appointed legal service provider for the Institute for Youth Research Malaysia (IYRES).">
+        <img src="assets/gallery/iyres-appointment.jpg" alt="Firm representatives with IYRES officials at the appointment" width="590" height="443" loading="lazy" />
+        <span class="gallery-overlay">IYRES appointment</span>
+      </button>
+      <button type="button" class="gallery-item" data-category="partnerships" data-caption="Signing the appointment agreement with IYRES.">
+        <img src="assets/gallery/iyres-signing.jpg" alt="Signing the appointment agreement with the Institute for Youth Research Malaysia" width="590" height="443" loading="lazy" />
+        <span class="gallery-overlay">Signing with IYRES</span>
+      </button>
+      <button type="button" class="gallery-item" data-category="partnerships" data-caption="Advising a corporate client at their headquarters.">
+        <img src="assets/gallery/corporate-partner.jpg" alt="Firm lawyers at a corporate client's headquarters" width="590" height="442" loading="lazy" />
+        <span class="gallery-overlay">At a corporate client's HQ</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button type="button" id="lightboxClose" class="lightbox-close" aria-label="Close image viewer">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <button type="button" id="lightboxPrev" class="lightbox-nav lightbox-prev" aria-label="Previous image">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <figure class="lightbox-figure">
+    <img id="lightboxImg" src="" alt="" />
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+  <button type="button" id="lightboxNext" class="lightbox-nav lightbox-next" aria-label="Next image">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+</div>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Have a matter we can help with?</h2>
+    <p>Tell us what you're dealing with. We'll be straight with you about where you stand and what comes next.</p>
+    <a href="book.html" class="btn btn-gold">Book a Consultation
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo-circle.jpg" alt="Bila Salehuddin &amp; Co. logo" style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,0.15);" />
+          <div>
+            <div style="font-family: var(--font-serif); font-size:1.15rem; color: var(--color-cream); margin-bottom:0.25rem;">Messrs Bila Salehuddin &amp; Co.</div>
+            <div style="font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color: var(--color-gold-light);">Advocates &amp; Solicitors</div>
+          </div>
+        </div>
+        <p style="max-width:340px; margin-top:1rem;">A full-service law firm with offices in Ipoh, Perak and Batu Caves, Kuala Lumpur. Registered with the Malaysian Bar.</p>        <div class="footer-social">
+          <a href="https://www.facebook.com/p/Bila-Salehuddin-Co-Kuala-Lumpur-61574542870846/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/60134101183" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.7c1.7.9 3.7 1.5 5.7 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/bila-salehuddin-co/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="gallery.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="book.html">Book Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Practice</h5>
+        <ul>
+          <li><a href="eviction.html">Eviction &amp; Tenancy</a></li>
+          <li><a href="contracts.html">Corporate &amp; Contracts</a></li>
+          <li><a href="conveyancing.html">Conveyancing</a></li>
+          <li><a href="litigation.html">Litigation</a></li>
+          <li><a href="ip.html">Intellectual Property</a></li>
+          <li><a href="accident.html">Accident &amp; Injury</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><strong style="color:var(--color-cream-dark);">HQ — Ipoh, Perak</strong></li>
+          <li><a href="tel:+60134101183">013-4101 183</a></li>
+          <li><a href="mailto:bsco.law@gmail.com">bsco.law@gmail.com</a></li>
+          <li style="margin-top:0.5rem;"><strong style="color:var(--color-cream-dark);">KL Branch</strong></li>
+          <li><a href="tel:+60147395022">014-7395 022</a></li>
+          <li><a href="mailto:bscokl.law@gmail.com">bscokl.law@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span id="year"></span> Bila Salehuddin &amp; Co. All rights reserved.</div>
+      <div>Information on this site does not constitute legal advice.</div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/60134101183" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.7C8.1 23.4 10 24 12 24c6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>
+</a>
+
+<button class="back-to-top" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+(function () {
+  const grid = document.getElementById('galleryGrid');
+  const items = Array.from(grid.querySelectorAll('.gallery-item'));
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightboxImg');
+  const lbCap = document.getElementById('lightboxCaption');
+  let current = -1;
+
+  const visible = () => items.filter(it => it.style.display !== 'none');
+  const show = it => { const img = it.querySelector('img'); lbImg.src = img.src; lbImg.alt = img.alt; lbCap.textContent = it.dataset.caption || img.alt; };
+
+  function openLightbox(it) {
+    const vis = visible();
+    current = vis.indexOf(it);
+    show(it);
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('lightboxClose').focus();
+  }
+  function closeLightbox() {
+    lb.classList.remove('active');
+    document.body.style.overflow = '';
+    const vis = visible();
+    if (current > -1 && vis[current]) vis[current].focus();
+    current = -1;
+  }
+  const prevImage = () => { const vis = visible(); if (!vis.length) return; current = (current - 1 + vis.length) % vis.length; show(vis[current]); };
+  const nextImage = () => { const vis = visible(); if (!vis.length) return; current = (current + 1) % vis.length; show(vis[current]); };
+
+  items.forEach(it => it.addEventListener('click', () => openLightbox(it)));
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  document.getElementById('lightboxPrev').addEventListener('click', prevImage);
+  document.getElementById('lightboxNext').addEventListener('click', nextImage);
+  lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    else if (e.key === 'ArrowLeft') prevImage();
+    else if (e.key === 'ArrowRight') nextImage();
+  });
+
+  const filters = Array.from(document.querySelectorAll('.gallery-filter'));
+  filters.forEach(fb => fb.addEventListener('click', () => {
+    filters.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+    fb.classList.add('active'); fb.setAttribute('aria-pressed', 'true');
+    const cat = fb.dataset.filter;
+    items.forEach(it => { it.style.display = (cat === 'all' || it.dataset.category === cat) ? '' : 'none'; });
+  }));
+})();
+</script>
+<script src="assets/main.js"></script>
+</body>
+</html>
